@@ -14,7 +14,8 @@ export default {
 
 .welcome {
     text-align: center;
-    padding: 20px 0px;
+    padding: 20px;
+    font-size: 15px;
 
 }
 

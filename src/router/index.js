@@ -5,12 +5,12 @@ import Chatroom from '../views/Chatroom.vue'
 const routes = [
   {
     path: '/',
-    name: 'Welcome',
+    name: 'welcome',
     component: Welcome
   },
   {
     path: '/chatroom',
-    name: 'Chatroom',
+    name: 'chatroom',
     component: () => import('../views/Chatroom.vue')
   }
  
