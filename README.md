@@ -1,6 +1,7 @@
-# chat-app
+### Vue chat app
 
-## Project setup
+- Vuejs
+- Firebase
 ```
 yarn install
 ```
