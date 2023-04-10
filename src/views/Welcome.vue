@@ -1,16 +1,35 @@
 <template>
   <div class="welcome container">
     <p> Welcome Chattie😍🥵</p>
-    <SignupForm/>
+    <div v-if="showLogin">
+      <h2>Login</h2>
+      <LoginForm />
+      <p>Don't have an account? <span class="chatspan" @click="showLogin=false">Signup</span></p>
+  
+
+    </div>
+    <div v-else>
+      <h2>Sign Up</h2>
+      <SignupForm />
+      <p>Already have an account? <span class="chatspan" @click="showLogin=true">Login</span></p>
+    </div>
+   
     <!-- <LoginForm/> -->
   </div>
+
+  
 </template>
 
 <script>
 import SignupForm from '../components/SignupForm.vue';
 import LoginForm from '../components/LoginForm.vue';
+import { ref } from 'vue';
 export default {
   components: { SignupForm,LoginForm },
+  setup() {
+  const showLogin = ref(true)
+  return{showLogin}
+  },
   
 
 }
@@ -35,7 +54,7 @@ export default {
 }
 .welcome input {
   width: 100%;
-  padding: 10px;
+  padding: 10px 5px;
   border: 1px solid #ccc;
   border-radius: 20px;
   outline: none;
@@ -53,4 +72,16 @@ export default {
   outline: none;
   
 }
+.chatspan{
+  cursor: pointer;
+  color: green;
+  text-decoration: underline;
+  font-weight: bold;
+  
+  
+}
+.chatspan:hover{
+  color: blue;
+}
+
 </style>
