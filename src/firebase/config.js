@@ -1,7 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
-
+import 'firebase/auth';
 const firebaseConfig = {
     apiKey: process.env.VUE_APP_FIREBASE_API_KEY,
     authDomain: process.env.VUE_APP_FIREBASE_AUTH_DOMAIN,
@@ -12,8 +12,10 @@ const firebaseConfig = {
   };
   
   firebase.initializeApp(firebaseConfig);
+  const projectAuth = firebaseConfig.auth();
 
   const projectFireStore = firebase.firestore();
   const timestamp= firebase.firestore.fieldValue.serverTimestamp;
 
-  export { projectFireStore, timestamp };
+  export { projectFireStore, timestamp, projectAuth };
+  
