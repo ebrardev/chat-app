@@ -4,18 +4,31 @@
         <p>Welcome 'displayName' </p>
         <p  class="email" >Currently logged in as... 'email'</p>
     </div>
-    <button class="my-navbar-button">Logout</button>
+    <button @click="handleClick" class="my-navbar-button">Logout</button>
 
   </nav>
 </template>
 
 <script>
+import useLogout from '../composables/useLogout';
 export default {
+    setup() {
+        const {logout,error} = useLogout();
+        const handleClick = async () => {
+            await logout();
+            if(!error.value) {
+                window.alert("Çıkış yapıyorsunuz..!");
+                window.location.href = "/";
+            }
+        }
+        return {
+            handleClick }
+    }
 
 }
 </script>
 
-<style scoped>
+<style >
  nav{
   padding: 20px;
 
@@ -47,6 +60,7 @@ export default {
     box-shadow: 0 0 20px #eee;
     border-radius: 10px;
     display: inline-block;
+    font-size: 12px;
 }
  
 .my-navbar-button:hover {
