@@ -74,7 +74,7 @@ export default {
 }
 .chatspan{
   cursor: pointer;
-  color: green;
+  color: rgb(129, 89, 196);
   text-decoration: underline;
   font-weight: bold;
   
