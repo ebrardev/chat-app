@@ -1,8 +1,8 @@
 <template>
-  <nav>
+  <nav >
     <div>
-        <p>Welcome 'displayName' </p>
-        <p  class="email" >Currently logged in as... 'email'</p>
+        <p>Welcome {{ user.displayName }} </p>
+        <p  class="email" >Currently logged in as... {{ user.email }}</p>
     </div>
     <button @click="handleClick" class="my-navbar-button">Logout</button>
 
@@ -11,9 +11,11 @@
 
 <script>
 import useLogout from '../composables/useLogout';
+import getUser from '../composables/getUser';
 export default {
     setup() {
         const {logout,error} = useLogout();
+        const {user} = getUser();
         const handleClick = async () => {
             await logout();
             if(!error.value) {
@@ -22,7 +24,8 @@ export default {
             }
         }
         return {
-            handleClick }
+            handleClick,user 
+        }
     }
 
 }
@@ -40,7 +43,8 @@ export default {
   margin: 2px auto;
   font-size: 16px;
   color: #444;
-  text-align: center
+  text-align: left;
+
  }
  nav p.email{
   font-size: 14px;
