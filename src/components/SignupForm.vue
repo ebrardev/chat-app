@@ -4,6 +4,7 @@
     <input type="text" required placeholder="Username" v-model="displayName" />
     <input type="email" required placeholder="email" v-model="email" />
     <input type="password" required placeholder="password" v-model="password" />
+     <div class="error">{{ error }}</div>
     <button class="signup"> Sign up</button>
   </form>
 </div>
@@ -25,7 +26,8 @@ export default {
             displayName,
             email,
             password,
-            handleSubmit
+            handleSubmit,
+            error
         }
     
 
