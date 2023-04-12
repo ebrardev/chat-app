@@ -3,7 +3,7 @@
     <textarea
       placeholder="Type a message and hit enter to send..."
       v-model="message"
-      @keypress.enter.prevent="handleSend"
+      @keypress.enter.prevent="handleSubmit"
     ></textarea>
     <div class="error">{{ error }}</div>
     <button @click.prevent="handleSend">Gönder</button>
