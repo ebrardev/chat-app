@@ -1,20 +1,8 @@
-### Vue chat app
+### Chat app
 
-- Vuejs
+- Vue3 project
 - Firebase
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Responsive
+![](https://cdn.discordapp.com/attachments/860256092541157380/1095705291573690449/Ekran_Alnts.JPG)
+![](https://cdn.discordapp.com/attachments/860256092541157380/1095704998249234493/ch1.JPG)
+![](https://cdn.discordapp.com/attachments/860256092541157380/1095708756949614643/Ekran_Alnts.JPG)
