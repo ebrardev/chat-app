@@ -6,7 +6,7 @@
       @keypress.enter.prevent="handleSubmit"
     ></textarea>
     <div class="error">{{ error }}</div>
-    <button @click.prevent="handleSend">Gönder</button>
+   
   </form>
 </template>
 <script>
@@ -71,8 +71,8 @@ button{
   display: block;
   margin-left: auto;
   margin-right: 0;
-  background-color: #f2f2f2;
-  color: #2f2f2f;
+  background-color: #551eb3;
+  color: white;
   font-weight: bold;
   font-size: 14px;
   transition: all 0.3s ease;
